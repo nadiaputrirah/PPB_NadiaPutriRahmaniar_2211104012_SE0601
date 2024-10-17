@@ -52,7 +52,8 @@ class pageWisata extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Jelajah Wisata',
+            'Jelajah Wisata'
+            ,
             style: TextStyle(
               fontSize: 24,
               color: Colors.white,
