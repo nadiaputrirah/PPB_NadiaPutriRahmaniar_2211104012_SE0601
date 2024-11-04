@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan_7/models/product.dart'; // Tambahkan import Product model
+import '../models/product.dart';
 
-class DetailProduct extends StatelessWidget {
-  const DetailProduct(
-      {super.key, required this.product}); // Ubah dari data ke product
+class ProductDetailPage extends StatelessWidget {
+  final Product product;
 
-  final Product product; // Ubah tipe data dari String ke Product
+  ProductDetailPage(this.product);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Detail Product"),
-        centerTitle: true,
-        backgroundColor: Colors.blue[300],
-      ),
+      appBar: AppBar(title: Text(product.nama)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -36,11 +31,8 @@ class DetailProduct extends StatelessWidget {
               'Rp ${product.harga.toStringAsFixed(2)}',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-            SizedBox(height: 16),
-            Text(
-              product.deskripsi,
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
+            SizedBox(height: 8),
+            Text(product.deskripsi),
           ],
         ),
       ),

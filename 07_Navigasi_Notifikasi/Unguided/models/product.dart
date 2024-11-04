@@ -5,7 +5,6 @@ class Product {
   final String imageurl;
   final String deskripsi;
 
-  // Constructor
   Product({
     required this.id,
     required this.nama,
@@ -14,7 +13,6 @@ class Product {
     required this.deskripsi,
   });
 
-  // Method untuk mengonversi JSON ke object Product
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
       id: json['id'],
@@ -25,7 +23,6 @@ class Product {
     );
   }
 
-  // Method untuk mengonversi object Product ke JSON
   Map<String, dynamic> toJson() {
     return {
       'id': id,
